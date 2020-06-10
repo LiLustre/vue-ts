@@ -1,0 +1,153 @@
+@import "../../assets/mixin/mixin.less";
+
+li {
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.hot-car-root {
+  padding-right: 50/@dev;
+
+}
+
+.hot-car-lable {
+  font-size: 32/@dev;
+  color: #333333;
+  padding-top: 20/@dev;
+  padding-bottom: 20/@dev;
+  padding-left: 30/@dev;
+  font-weight: bold;
+}
+
+.hot-car-ul {
+  flex-wrap: wrap;
+  display: flex;
+  display: -webkit-flex;
+  width: 100%;
+  padding-left:50/@dev
+}
+
+.hot-car-li {
+  width: 20%;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40/@dev;
+  .hot-car-image {
+    height: 55/@dev;
+    width: 55/@dev;
+  }
+
+  .hot-car-span {
+    font-size: 24/@dev;
+    color: #666666;
+    margin-top: 10/@dev;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.list-group-title {
+  height: 40/@dev;
+  line-height: 40/@dev;
+  padding-left: 30/@dev;
+  font-size: 26/@dev;
+  color: #666666;
+  background: #F7F7F7
+}
+
+.avatar {
+  height: 55/@dev;
+  width: 55/@dev;
+}
+
+.list-group-item {
+  height: 96/@dev;
+  display: flex;
+  align-items: center;
+  padding-left: 30/@dev;
+}
+
+.name {
+  padding-left: 40/@dev;
+  color: #333333;
+  font-size: 30/@dev;
+  font-weight: bold;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-fixed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%
+}
+
+.fixed-title {
+  height: 40/@dev;
+  line-height: 40/@dev;
+  padding-left: 30/@dev;
+  font-size: 26/@dev;
+  color: #666666;
+  background: #F7F7F7
+}
+
+.list-shortcut {
+  position: absolute;
+  z-index: 900;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40/@dev;
+  margin-right: 10/@dev;
+  padding: 20/@dev 0;
+  text-align: center;
+
+}
+
+.list-shortcut-item {
+  padding-left: 5/@dev;
+  padding-right: 5/@dev;
+  line-height: 1;
+  padding-bottom: 6/@dev;
+  padding-top: 6/@dev;
+  font-size: 20/@dev;
+  color: #333333;
+}
+
+.shortcut-title {
+  position: absolute;
+  width: 132/@dev;
+  height: 132/@dev;
+  background-color: #4A4A4A;
+  border-radius: 20/@dev;
+  font-size: 72/@dev;
+  color: #FFFFFF;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  line-height: 132/@dev;;
+}
+
+

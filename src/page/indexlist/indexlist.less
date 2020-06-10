@@ -1,0 +1,69 @@
+@import "../../assets/mixin/mixin.less";
+
+
+.root {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%
+}
+
+.container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+  box-sizing: border-box;
+  /*
+属性规定框的子元素应该被水平或垂直排列。
+*/
+  -webkit-box-orient: vertical;
+  /*
+属性规定框元素的子元素以什么方向来排列。
+*/
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.fix-top {
+  background-color: #FE894F;
+  height: 100/@dev;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  padding-left: 30/@dev;
+}
+
+.brand-logo-parent {
+  width: 72/@dev;
+  height: 72/@dev;
+  line-height: 72/@dev;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  display: -webkit-flex;
+}
+
+.brand-logo {
+  width: 55/@dev;
+  height: 55/@dev;
+  line-height: 72/@dev;
+  margin: auto;
+}
+
+.brand-name {
+  font-size: 30/@dev;
+  color: #ffffff;
+  font-weight: bold;
+  margin-left: 20/@dev;
+}
+
+.fix-content {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}

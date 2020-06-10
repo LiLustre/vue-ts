@@ -1,0 +1,50 @@
+@import "../../assets/mixin/mixin.less";
+
+.carid-input-root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.carid-input {
+  width: 72/@dev;
+  height: 87/@dev;
+  border: 2/@dev solid #E6E6E6;
+  border-radius: 10/@dev;
+  background-color: #FBFBFB;
+  font-size: 35/@dev;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+
+}
+.carid-input-last{
+  width: 72/@dev;
+  height: 87/@dev;
+  border: 2/@dev dashed #E6E6E6;
+  border-radius: 10/@dev;
+  background-color: #FAFCFF;
+  font-size: 35/@dev;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+}
+
+
+/* WebKit browsers  */
+input::-webkit-input-placeholder {
+  color: #E6E6E6;
+  /* 字体大小直接写样式即可 */
+  font-size: 35/@dev;
+}
+.carid-input-seleted {
+  width: 72/@dev;
+  height: 87/@dev;
+  border: 2/@dev solid rgba(254, 137, 79, 1);
+  border-radius: 10/@dev;
+  background-color: #FBFBFB;
+  font-size: 35/@dev;
+  color: #333333;
+  text-align: center;
+}

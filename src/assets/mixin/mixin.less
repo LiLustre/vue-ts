@@ -1,0 +1,208 @@
+/*
+flexble方案会把视觉稿分为100份,主要是为了以后可以更好的兼容vh 和 vw ,而每一份被称为一个单位a,同时1rem单位被认定为10a,这么算我们可以得出 :
+设计稿的宽度 750 px
+1a = 750px/100
+1a 为 : 7.5px
+1rem =10a
+1rem为: 75px
+*/
+@dev:75rem;
+/*
+图片适配
+*/
+.set-bg-img(@url, @type) {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* 1倍屏 */
+  @media only screen and (-webkit-min-device-pixel-ratio: 1) {
+    & {
+      background-image: url('@{url}@1x.@{type}');
+    }
+  }
+
+  /* 2倍屏 */
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    & {
+      background-image: url('@{url}@2x.@{type}');
+    }
+  }
+
+  /* 3倍屏 */
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    & {
+      background-image: url('@{url}@3x.@{type}');
+    }
+  }
+}
+
+/* 底部分隔线 1物理像素 */
+.one-px-border(@color) {
+  /* 2倍屏 */
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    &::after {
+      content: ' ';
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: @color;
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+    }
+  }
+
+  /* 3倍屏 */
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    &::after {
+      content: ' ';
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: @color;
+      -webkit-transform: scaleY(0.3333333333333333333333333);
+      transform: scaleY(0.33333333333333333333333);
+    }
+  }
+}
+
+
+/* 顶部分隔线 1物理像素 */
+.one-px-border-top(@color) {
+  /* 2倍屏 */
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    &::after {
+      content: ' ';
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: @color;
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+    }
+  }
+
+  /* 3倍屏 */
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    &::after {
+      content: ' ';
+      width: 100%;
+      height: 1px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background-color: @color;
+      -webkit-transform: scaleY(0.3333333333333333333333333);
+      transform: scaleY(0.33333333333333333333333);
+    }
+  }
+}
+
+/* 左侧分隔线 1物理像素 */
+.one-px-border-left(@color,@height) {
+  /* 2倍屏 */
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    &::after {
+      content: ' ';
+      height: @height;
+      width: 1px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: -@height / 2;
+      background-color: @color;
+      -webkit-transform: scaleX(0.5);
+      transform: scaleX(0.5);
+    }
+  }
+
+  /* 3倍屏 */
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    &::after {
+      content: ' ';
+      height: @height;
+      width: 1px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: -@height / 2rem;
+      background-color: @color;
+      -webkit-transform: scaleX(0.3333333333333333333333333);
+      transform: scaleX(0.33333333333333333333333);
+    }
+  }
+}
+
+/* 右侧分隔线 1物理像素 */
+.one-px-border-right(@color,@height) {
+  /* 2倍屏 */
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    &::after {
+      content: ' ';
+      height: @height;
+      width: 2px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: -@height / 2;
+      background-color: @color;
+      -webkit-transform: scaleX(0.5);
+      transform: scaleX(0.5);
+    }
+  }
+
+  /* 3倍屏 */
+  @media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    &::after {
+      content: ' ';
+      height: @height;
+      width: 1px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: -@height / 2;
+      background-color: @color;
+      -webkit-transform: scaleX(0.3333333333333333333333333);
+      transform: scaleX(0.33333333333333333333333);
+    }
+  }
+}
+
+.clear_float() {
+  *zoom: 1;
+  &::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
+
+.flex() {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.flex-n(@n) {
+  -webkit-box-flex: @n;
+  -webkit-flex: @n;
+  -ms-flex: @n;
+  flex: @n;
+}

@@ -1,0 +1,44 @@
+@import "../../assets/mixin/mixin.less";
+
+.page {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  height: 100%;
+  /* width: 50%;*/
+}
+.content{
+
+  position: relative;
+  flex: 1;
+}
+.tab-root {
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.tab-content {
+  height: 120%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.tab {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  background-color: lightblue;
+  margin-right: 10px;
+}
+.title-top{
+  height: 100px;
+  background-color: white;
+  z-index: 10001;
+}
+.title {
+  height: 100px;
+  background-color: white;
+}

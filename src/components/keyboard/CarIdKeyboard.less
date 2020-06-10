@@ -1,0 +1,277 @@
+@import "../../assets/mixin/mixin.less";
+
+@images: "../../assets/images/";
+.top-hiden-parent {
+  height: 62/@dev;
+
+  position: relative;
+}
+
+.keyboard-root {
+  background-color: #EBEBEB;
+}
+
+.hiden-icon {
+  width: 50/@dev;
+  height: 14/@dev;
+  min-width: 50/@dev;
+  min-height: 14/@dev;
+  .set-bg-img('@{images}hide_keyboard_icon', png);
+  display: inline-block;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.line-div {
+  height: 1px;
+  position: relative;
+  .one-px-border(#ffffff)
+}
+
+.province-keyboard-parent {
+  display: flex;
+  width: 100%;
+  display: -webkit-flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 4/@dev;
+  padding-right: 4/@dev;
+  padding-top: 4/@dev;
+  padding-bottom: 4/@dev;
+  touch-action: none;
+
+
+}
+
+.province-key-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.province-keyboard-key-parent {
+  width: 1/7*100%;
+  height: 84/@dev;
+  padding-left: 4/@dev;
+  padding-right: 4/@dev;
+  padding-bottom: 4/@dev;
+  padding-top: 4/@dev;
+  position: relative;
+}
+
+.province-keyboard-key-del-parent {
+  width: 2/7*100%;
+  height: 84/@dev;
+  padding-left: 4/@dev;
+  padding-right: 4/@dev;
+  padding-bottom: 4/@dev;
+  padding-top: 4/@dev;
+  position: relative;
+}
+
+.province-keyboard-key {
+  width: 100%;
+  height: 100%;
+  background-color: #FAFAFA;
+  border: 0;
+  box-shadow: 0px 1px 0px 0px #C2C2C2;
+  border-radius: 8 / @dev;
+  color: #333333;
+  font-size: 32/@dev;
+}
+
+.province-keyboard-key-press {
+  width: 100%;
+  height: 100%;
+  background-color: #F2E4DD;
+  color: #FE894F;
+  border: 0;
+  box-shadow: 0px 1/@dev 0px 0px rgba(254, 137, 79, 1);
+  border-radius: 8 / @dev;
+  font-size: 32/@dev;
+}
+
+.province-keyboard-del-key {
+  width: 100%;
+  height: 100%;
+  background-color: #DEDEDE;
+  border: 0;
+  box-shadow: 0px 1px 0px 0px #C2C2C2;
+  border-radius: 8 / @dev;
+  color: #333333;
+  font-size: 32/@dev;
+
+}
+
+.del-key-icon {
+  width: 72/@dev;
+  height: 40/@dev;
+  min-width: 72/@dev;
+  min-height: 40/@dev;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  .set-bg-img('@{images}keyboard-del-icon', png);
+}
+
+.press-tip {
+  width: 105%;
+  height: 120/@dev;
+  line-height: 120/@dev;
+  position: absolute;
+  left: -2.5%;
+  top: -126/@dev;
+  font-size: 50/@dev;
+  background-color: #FAFAFA;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 10000;
+  border-radius: 8/@dev;
+  box-shadow: 0px 2/@dev 3/@dev 0px
+  // border-radius: 10/@dev 10/@dev 0 0;
+}
+
+.carid-keyboard-parent {
+  touch-action: none;
+}
+
+.suffix-key-row {
+  width: 100%;
+  position: relative;
+  display: flex;
+  display: -webkit-flex;
+}
+
+.suffix-key-parent {
+  width: 1/6*100%;
+  height: 78/@dev;
+  padding-left: 4/@dev;
+  padding-right: 4/@dev;
+  padding-bottom: 4/@dev;
+  padding-top: 4/@dev;
+  position: relative;
+}
+
+.suffix-keyboard-key {
+  width: 100%;
+  height: 100%;
+  background-color: #DEDEDE;
+  border: 0;
+  box-shadow: 0px 1px 0px 0px #C2C2C2;
+  border-radius: 8 / @dev;
+  color: #333333;
+  font-size: 32/@dev;
+}
+
+.suffix-keyboard-key-press {
+  width: 100%;
+  height: 100%;
+  background-color: #F2E4DD;
+  border: 0;
+  box-shadow: 0px 1px 0px 0px #FE894F;
+  border-radius: 8 / @dev;
+  color: #FE894F;
+  font-size: 32/@dev;
+}
+
+.charnum-keyboard-parent {
+  display: flex;
+  width: 100%;
+  display: -webkit-flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 4/@dev;
+  padding-right: 4/@dev;
+  padding-top: 4/@dev;
+  padding-bottom: 4/@dev;
+}
+
+.charnum-key-parent {
+  width: 1/10*100%;
+  height: 84/@dev;
+  padding-left: 4/@dev;
+  padding-right: 4/@dev;
+  padding-bottom: 4/@dev;
+  padding-top: 4/@dev;
+  position: relative;
+}
+
+.charnum-key-del-parent {
+  width: 2/10*100%;
+  height: 84/@dev;
+  padding-left: 4/@dev;
+  padding-right: 4/@dev;
+  padding-bottom: 4/@dev;
+  padding-top: 4/@dev;
+  position: relative;
+}
+
+.char-key {
+  width: 100%;
+  height: 100%;
+  background-color: #FAFAFA;
+  border: 0;
+  box-shadow: 0px 1px 0px 0px #C2C2C2;
+  border-radius: 8 / @dev;
+  color: #333333;
+  font-size: 32/@dev;
+}
+
+.char-key-disable {
+  width: 100%;
+  height: 100%;
+  background-color: #FAFAFA;
+  border: 0;
+  box-shadow: 0px 1px 0px 0px #C2C2C2;
+  border-radius: 8 / @dev;
+  color: #C5C5C5;
+  font-size: 32/@dev;
+  pointer-events: none;
+}
+
+.num-key {
+  width: 100%;
+  height: 100%;
+  background-color: #DEDEDE;
+  border: 0;
+  box-shadow: 0px 1px 0px 0px #C2C2C2;
+  border-radius: 8 / @dev;
+  color: #333333;
+  font-size: 32/@dev;
+}
+
+.charnum-key-press {
+  width: 100%;
+  height: 100%;
+  background-color: #F2E4DD;
+  color: #FE894F;
+  border: 0;
+  box-shadow: 0px 1/@dev 0px 0px rgba(254, 137, 79, 1);
+  border-radius: 8 / @dev;
+  font-size: 32/@dev;
+}
+
+.charnum-press-tip {
+  width: 105%;
+  height: 90/@dev;
+  line-height: 90/@dev;
+  position: absolute;
+  left: -2.5%;
+  top: -96/@dev;
+  font-size: 50/@dev;
+  background-color: #FAFAFA;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 10000;
+  border-radius: 8/@dev;
+  box-shadow: 0px 2/@dev 3/@dev 0px
+  // border-radius: 10/@dev 10/@dev 0 0;
+}

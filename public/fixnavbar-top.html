@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+</head>
+<body>
+<div class="page">
+    <div class="container">
+        <div class="fix-top">
+
+        </div>
+        <div class="content">
+            <h1>item1</h1>
+            <h1>item2</h1>
+
+            <h1>item3</h1>
+            <h1>item4</h1>
+            <h1>item5</h1>
+            <h1>item6</h1>
+            <h1>item7</h1>
+            <h1>item8</h1>
+            <h1>item9</h1>
+            <h1>item10</h1>
+
+            <h1>item11</h1>
+            <h1>item12</h1>
+            <h1>item13</h1>
+            <h1>item14</h1>
+            <h1>item15</h1>
+            <h1>item16</h1>
+        </div>
+    </div>
+
+</div>
+</body>
+<style>
+    .page {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+    }
+
+    .container {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        height: 100%;
+        box-sizing: border-box;
+        /*
+      属性规定框的子元素应该被水平或垂直排列。
+      */
+        -webkit-box-orient: vertical;
+        /*
+      属性规定框元素的子元素以什么方向来排列。
+      */
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .fix-top {
+
+        background-color: #10aeff;
+        height: 100px;
+    }
+
+    .content {
+        box-sizing: border-box;
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        flex: 1;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+</style>
+</html>
