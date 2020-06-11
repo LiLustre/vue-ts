@@ -61,7 +61,7 @@ export default class CarsPicker extends Vue {
                     let wheel = new BScroll(wheelWrapper.children[i] as HTMLElement, {
                         wheel: {
                             selectedIndex: this.selectedIndex[i],
-                            //rotate:0,
+                            rotate:0,
                             wheelWrapperClass: 'wheel-scroll',
                             wheelItemClass: 'wheel-item'
                         },
