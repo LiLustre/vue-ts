@@ -7,10 +7,36 @@
   -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .12);
   box-shadow: 0 2px 3px rgba(0, 0, 0, .12);
   overflow: hidden;
-  display: inline-block;
+  //display: inline-block;
   margin: 0 auto;
+  position: relative;
 }
 
+.tab-mask-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: nowrap;
+  height: 90/@dev;
+  width: 100%;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.left_mask {
+  height: 100%;
+  width: 40/@dev;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+  z-index: 2;
+}
+.right_mask {
+  height: 100%;
+  width: 40/@dev;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+  z-index: 2;
+}
 .tab-list-wrapper {
   position: relative;
   height: 100%;
@@ -23,19 +49,18 @@
 }
 
 .tab-scroll-content {
-  width:100%;
+  width: 100%;
   position: relative;
   z-index: 1;
-  overflow:hidden;
-  white-space:nowrap;
-  overflow:hidden;
+  overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
   display: inline-block;
 }
 
 .tab-list {
   margin: 0 auto;
   list-style: none;
-
   white-space: nowrap;
   display: inline-block;
 }
@@ -52,7 +77,12 @@
   display: block;
   position: relative;
   padding: 0 30/@dev 0 30/@dev;
-  font-size: 14px;
+  font-size: 28/@dev;
+  color: #333333;
+}
+.tab-name-selected{
+  font-size: 30/@dev;
+  font-weight: bold;
   color: #333333;
 }
 

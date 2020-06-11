@@ -14,10 +14,10 @@
             <div class="picker-content">
                 <div class="mask mask-top "></div>
                 <div class="mask mask-bottom"></div>
-                <div class="left-bg">
+                <div class="carpicker-left-bg">
                     <div class="select-bg"></div>
                 </div>
-                <div class="right-bg">
+                <div class="carpicker-right-bg">
                     <div class="select-bg"></div>
                 </div>
                 <div class="wheel-wrapper" ref="wheelWrapper">

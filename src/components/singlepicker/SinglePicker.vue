@@ -13,9 +13,7 @@
             <div class="picker-content">
                 <div class="mask mask-top "></div>
                 <div class="mask mask-bottom"></div>
-                <div class="left-bg">
-                    <div class="select-bg"></div>
-                </div>
+                <div class="select-bg"></div>
                 <div class="wheel-wrapper" ref="wheelWrapper">
                     <div class="wheel">
                         <ul class="wheel-scroll" v-if="pickerData">
@@ -33,6 +31,6 @@
 <script lang="ts" src="./single-picker.ts">
 </script>
 
-<style  lang="less" src="./SinglePicker.less">
+<style lang="less" src="./SinglePicker.less">
 
 </style>

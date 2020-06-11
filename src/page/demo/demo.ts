@@ -18,7 +18,7 @@ import Tab from "@/components/tab/Tab.vue";
         'top-dailog': TopDialog,
         'cars-picker': CarsPicker,
         'single-picker': SinglePicker,
-        'tab':Tab
+        'tab': Tab
     }
 })
 export default class Demo extends Vue {
@@ -58,6 +58,35 @@ export default class Demo extends Vue {
                 }
             ]
         }, 300);
+    }
+
+    public tabArray: Array<string> = [];
+
+    public mounted() {
+        setTimeout(() => {
+            this.tabArray = [
+                "全部1",
+                "嘉实多2",
+                "出光3",
+                "壳牌4",
+                "美孚5",
+                "嘉实多6",
+                "出光7",
+                "壳8",
+                "嘉实多9",
+                "出10",
+                "壳牌11",
+                "嘉实多12",
+                "出光13",
+                "壳牌14",
+                "嘉实多15",
+                "出光16",
+                "壳牌17",
+            ];
+            this.$nextTick(() => {
+                (this.$refs.tab as any).initScroll();
+            })
+        }, 500);
     }
 
     public onCarIDSelected(pos: number) {
@@ -100,6 +129,12 @@ export default class Demo extends Vue {
     public onCarSelected(carGroupPos: number, carPos: number) {
         console.log('carGroupPos' + carGroupPos);
         console.log('carPos' + carPos);
+
+    }
+
+    public onTabSelected(tabIndex: number) {
+
+        console.log('tabIndex' + tabIndex);
 
     }
 }

@@ -4,7 +4,7 @@
         <div class="title-top" style="background-color: #10aeff" v-on:click="onChoosCarClick">车牌选择</div>
         <div class="title-top" style="background-color: #10aeff" v-on:click="onSinglePickerClick">单列picker</div>
         <carid-input ref="caridInput" @onCarIdItemSelected="onCarIDSelected"></carid-input>
-        <tab></tab>
+        <tab ref="tab" :tabArray="tabArray" @tabSelected="onTabSelected"></tab>
         <div class="content">
             <top-dailog ref="topDialog">
                 <div class="title">111</div>
