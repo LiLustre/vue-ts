@@ -5,7 +5,7 @@
              v-show="isShow"
              v-on:click.self="onMaskClick">
             <transition name="bottom-slide-fade">
-                <div class="bottom-content" v-show="menuIsShow" v-on:click.stop="onContentClick">
+                <div class="bottom-content" v-show="isShow" v-on:click.stop="onContentClick">
                     <slot></slot>
                 </div>
             </transition>
@@ -21,7 +21,7 @@
     .normal-dialog-background {
         width: 100%;
         height: 100%;
-        position: fixed;
+        position: absolute;
         z-index: 1000;
         right: 0;
         top: 0;
@@ -45,6 +45,7 @@
         bottom: 0;
         left: 0;
         right: 0;
+        width: 100%;
         pointer-events: auto;
     }
 

@@ -78,8 +78,7 @@ export default class IndexList extends Vue {
     public onCarBrandClickHandler(carBrand: CarBrand) {
         this.curCarBrand = carBrand;
         console.log('onCarBrandClickHandler:' + carBrand.car_brand_id);
-       // (this.$refs.menu as any).showMenu();
-        (this.$refs.caridKeyBoard as any).showKeyboard();
+        (this.$refs.menu as any).showMenu();
     }
 
     public onRootClick(){

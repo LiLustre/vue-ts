@@ -8,16 +8,12 @@
                     <div class="brand-logo-parent">
                         <img class="brand-logo" :src="curCarBrand.car_brand_image">
                     </div>
-
                     <span class="brand-name">{{curCarBrand.car_brand_name}}</span>
                 </div>
                 <div class="fix-content">
                 </div>
             </div>
         </side-menu>
-        <carid-keyboard ref="caridKeyBoard">
-
-        </carid-keyboard>
     </div>
 </template>
 <script lang="ts" src="./index-list.ts">

@@ -23,7 +23,6 @@ export default class BottomDialog extends Vue {
     public showMenu() {
         if (!this.isShow) {
             this.isShow = true;
-            this.menuIsShow = true;
             this.$emit('onBottomDialogShow');
         }
     }
@@ -39,8 +38,7 @@ export default class BottomDialog extends Vue {
     }
 
     private hideDialog() {
-        if (this.menuIsShow && this.isShow) {
-            this.menuIsShow = false;
+        if (this.isShow) {
             this.isShow = false;
             this.$emit('onBottomDialogHiden');
         }
