@@ -8,17 +8,31 @@ import CarIDInput from "../../components/caridinput/CarIDInput.vue";
 import CarIdKeyboard from "../../components/keyboard/CarIdKeyboard.vue";
 import TopDialog from "@/components/base/topdialog/TopDialog.vue";
 import CarsPicker from "@/components/carspicker/CarsPicker.vue";
+import SinglePicker from "@/components/singlepicker/SinglePicker.vue";
+import Tab from "@/components/tab/Tab.vue";
 
 @Component({
     components: {
         'carid-input': CarIDInput,
         'carid-keyboard': CarIdKeyboard,
         'top-dailog': TopDialog,
-        'cars-picker': CarsPicker
+        'cars-picker': CarsPicker,
+        'single-picker': SinglePicker,
+        'tab':Tab
     }
 })
 export default class Demo extends Vue {
     public carGroup: Array<any> = [];
+    public singPickerData: Array<string> = [
+        "辽A15457",
+        "辽A15451",
+        "辽A15452",
+        "辽A15453",
+        "辽A15454",
+        "辽A15455",
+        "辽A15457",
+        "辽A15458",
+    ];
 
     created() {
         setTimeout(() => {
@@ -70,6 +84,17 @@ export default class Demo extends Vue {
             (this.$refs.carsPicker as any).showPicker();
         })
 
+    }
+
+    public onSinglePickerClick() {
+        this.$nextTick(() => {
+            (this.$refs.singlePicker as any).showPicker();
+        })
+
+    }
+
+    public onSingleSelected(dataPos: number) {
+        console.log('carGroupPos' + dataPos);
     }
 
     public onCarSelected(carGroupPos: number, carPos: number) {
