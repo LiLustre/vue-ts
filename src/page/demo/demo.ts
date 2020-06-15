@@ -10,6 +10,7 @@ import TopDialog from "@/components/base/topdialog/TopDialog.vue";
 import CarsPicker from "@/components/carspicker/CarsPicker.vue";
 import SinglePicker from "@/components/singlepicker/SinglePicker.vue";
 import Tab from "@/components/tab/Tab.vue";
+import ReceiveCoupon from "@/components/receivecoupon/ReceiveCoupon.vue";
 
 @Component({
     components: {
@@ -18,10 +19,12 @@ import Tab from "@/components/tab/Tab.vue";
         'top-dailog': TopDialog,
         'cars-picker': CarsPicker,
         'single-picker': SinglePicker,
-        'tab': Tab
+        'tab': Tab,
+        'receive-coupon':ReceiveCoupon
     }
 })
 export default class Demo extends Vue {
+
     public carGroup: Array<any> = [];
     public singPickerData: Array<string> = [
         "辽A15457",
@@ -63,6 +66,10 @@ export default class Demo extends Vue {
     public tabArray: Array<string> = [];
 
     public mounted() {
+
+
+
+
         setTimeout(() => {
             this.tabArray = [
                 "全部1",
@@ -137,4 +144,9 @@ export default class Demo extends Vue {
         console.log('tabIndex' + tabIndex);
 
     }
+
+    public onBtnClick(){
+        (this.$refs.receiveCoupon as any).show();
+    }
+
 }

@@ -7,11 +7,13 @@
   height: 100%;
   /* width: 50%;*/
 }
-.content{
+
+.content {
 
   position: relative;
   flex: 1;
 }
+
 .tab-root {
   height: 50px;
   width: 100%;
@@ -33,12 +35,53 @@
   background-color: lightblue;
   margin-right: 10px;
 }
-.title-top{
+
+.title-top {
   height: 100px;
   background-color: white;
   z-index: 10001;
 }
+
 .title {
   height: 100px;
   background-color: white;
+}
+
+.service_root {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 30/@dev;
+  overflow: hidden;
+}
+
+.service_root1 {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: left;
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.service-item {
+  width: 180/@dev;
+  min-width: 180/@dev;
+  height: 180/@dev;
+  border-radius: 10/@dev;
+  background-color: #1196ff;
+  margin-right: 20/@dev;
+}
+
+.detail {
+  width: 90/@dev;
+  min-width: 90/@dev;
+  height: 180/@dev;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(229, 229, 229, 1);
+}
+.button{
+  width: 100px;
+  height: 50px;
 }
